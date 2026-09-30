@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Size Reducer - Compress Images Online</title>
+<meta name="description" content="Reduce image size online for free. Compress JPG, JPEG and PNG images to a target file size without uploading them to a server.">
+<meta name="robots" content="index, follow">
+
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f5f7fb;color:#222;line-height:1.6}
+header{background:#fff;border-bottom:1px solid #e5e7eb;padding:18px 20px}
+.navbar{max-width:1100px;margin:auto;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:24px;font-weight:bold;color:#2563eb}
+nav a{color:#333;text-decoration:none;margin-left:22px}
+nav a:hover{color:#2563eb}
+.container{max-width:1000px;margin:auto;padding:30px 20px}
+.hero{text-align:center;margin:25px 0 30px}
+.hero h1{font-size:40px;margin-bottom:10px}
+.hero p{color:#666;font-size:18px}
+.ad-box{min-height:100px;background:#fff;border:1px solid #eee;display:flex;justify-content:center;align-items:center;color:#999;margin:25px 0}
+.tool{background:#fff;border-radius:14px;padding:30px;box-shadow:0 4px 20px rgba(0,0,0,.07)}
+.upload-area{border:2px dashed #2563eb;background:#f8fbff;border-radius:12px;padding:45px 20px;text-align:center;cursor:pointer}
+.upload-area:hover{background:#eff6ff}
+.upload-icon{font-size:45px}
+.upload-title{font-size:20px;font-weight:bold;color:#2563eb}
+.upload-subtitle{color:#777}
+#imageInput{display:none}
+#toolContent{display:none;margin-top:30px}
+.preview{text-align:center;margin-bottom:25px}
+.preview img{max-width:100%;max-height:350px;border-radius:8px;border:1px solid #ddd}
+.info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;margin-bottom:25px}
+.info-card{background:#f7f8fa;padding:18px;border-radius:9px;text-align:center}
+.info-card strong{display:block;margin-bottom:5px}
+.option-section,.resize-section{margin-top:25px}
+.option-section label,.resize-section label{font-weight:bold;display:block;margin-bottom:8px}
+select,input[type="number"]{width:100%;padding:12px;border:1px solid #ccc;border-radius:7px;font-size:15px;background:#fff}
+.custom-size{display:none;margin-top:12px}
+.resize-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.button{border:0;background:#2563eb;color:#fff;padding:14px 25px;font-size:16px;border-radius:7px;cursor:pointer;margin-top:25px;width:100%}
+.button:hover{background:#1d4ed8}
+.result{display:none;margin-top:30px;padding:20px;border-radius:10px;background:#f0fdf4;border:1px solid #bbf7d0;text-align:center}
+.result h3{margin-top:0}
+.saving{font-weight:bold;color:#15803d}
+.download-button{display:inline-block;margin-top:15px;background:#16a34a;color:#fff;text-decoration:none;padding:12px 25px;border-radius:7px}
+.download-button:hover{background:#15803d}
+.content{background:#fff;margin-top:30px;padding:30px;border-radius:12px}
+.content h2{color:#2563eb;margin-top:0}
+.content h3{margin-top:25px}
+footer{margin-top:50px;background:#1f2937;color:#fff;text-align:center;padding:30px 20px}
+footer a{color:#fff;text-decoration:none;margin:0 10px}
+@media(max-width:700px){
+.navbar{flex-direction:column;gap:15px}
+nav a{margin:0 8px}
+.hero h1{font-size:30px}
+.tool{padding:20px}
+.info-grid,.resize-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+<header>
+<div class="navbar">
+<div class="logo">ImageReduce</div>
+<nav>
+<a href="#tool">Tool</a>
+<a href="#about">About</a>
+<a href="#privacy">Privacy</a>
+<a href="#terms">Terms</a>
+</nav>
+</div>
+</header>
+
+<main class="container">
+<section class="hero">
+<h1>Image Size Reducer</h1>
+<p>Reduce image file size online quickly and easily.</p>
+</section>
+
+<div class="ad-box">Advertisement</div>
+
+<section class="tool" id="tool">
+<div class="upload-area" onclick="document.getElementById('imageInput').click()">
+<div class="upload-icon">🖼️</div>
+<div class="upload-title">Click to Upload Image</div>
+<div class="upload-subtitle">JPG, JPEG or PNG</div>
+<input type="file" id="imageInput" accept="image/jpeg,image/jpg,image/png" onchange="loadImage(event)">
+</div>
+
+<div id="toolContent">
+<div class="preview"><img id="previewImage" alt="Selected image preview"></div>
+
+<div class="info-grid">
+<div class="info-card"><strong>Original Size</strong><span id="originalSize">-</span></div>
+<div class="info-card"><strong>Original Dimensions</strong><span id="originalDimensions">-</span></div>
+</div>
+
+<div class="option-section">
+<label for="targetSize">Target Image Size</label>
+<select id="targetSize" onchange="changeTargetSize()">
+<option value="50">50 KB</option>
+<option value="100">100 KB</option>
+<option value="200">200 KB</option>
+<option value="500">500 KB</option>
+<option value="1024">1 MB</option>
+<option value="custom">Custom Size</option>
+</select>
+<div class="custom-size" id="customSizeBox">
+<input type="number" id="customSize" placeholder="Enter size in KB" min="1">
+</div>
+</div>
+
+<div class="resize-section">
+<label>Image Dimensions</label>
+<div class="resize-grid">
+<input type="number" id="imageWidth" placeholder="Width in pixels" min="1">
+<input type="number" id="imageHeight" placeholder="Height in pixels" min="1">
+</div>
+<p style="color:#777;font-size:14px">Leave these empty to keep the original dimensions.</p>
+</div>
+
+<div class="option-section">
+<label for="outputFormat">Output Format</label>
+<select id="outputFormat">
+<option value="original">Keep Original Format</option>
+<option value="jpeg">JPG / JPEG</option>
+<option value="png">PNG</option>
+<option value="webp">WebP</option>
+</select>
+</div>
+
+<button class="button" onclick="compressImage()">Reduce Image Size</button>
+
+<div class="result" id="result">
+<h3>Image Successfully Reduced</h3>
+<p>Original Size: <strong id="resultOriginal">-</strong></p>
+<p>New Size: <strong id="resultNew">-</strong></p>
+<p>Size Saved: <span class="saving" id="resultSaving">-</span></p>
+<a id="downloadButton" class="download-button" download="reduced-image">Download Reduced Image</a>
+</div>
+</div>
+</section>
+
+<div class="ad-box">Advertisement</div>
+
+<section class="content" id="about">
+<h2>What is an Image Size Reducer?</h2>
+<p>An image size reducer helps reduce the file size of an image while keeping the image as clear as possible.</p>
+
+<h2>How to Reduce Image Size?</h2>
+<p>Upload your image, select the target file size, choose the output format and click the "Reduce Image Size" button.</p>
+
+<h3>Supported Image Formats</h3>
+<p>This tool supports JPG, JPEG and PNG images. You can also convert images to WebP format.</p>
+
+<h3>Is My Image Uploaded to a Server?</h3>
+<p>No. Image processing is performed directly inside your web browser. Your image does not need to be uploaded to our server.</p>
+
+<h3>Why Reduce Image Size?</h3>
+<p>Smaller image files use less storage space and are easier to share through email, messaging applications and websites.</p>
+</section>
+
+<section class="content" id="privacy">
+<h2>Privacy Policy</h2>
+<p>We respect your privacy. Images selected for compression are processed directly in your browser. We do not require users to create an account to use this tool.</p>
+<p>This website may use third-party advertising services such as Google AdSense. Advertising services may use cookies or similar technologies according to their own policies.</p>
+</section>
+
+<section class="content" id="terms">
+<h2>Terms and Conditions</h2>
+<p>This website is provided for general image compression purposes. Users are responsible for the images they process using this tool.</p>
+<p>We do not guarantee that every image will reach the exact requested file size or retain the exact original quality after compression.</p>
+</section>
+
+<div class="ad-box">Advertisement</div>
+</main>
+
+<footer>
+<p>© 2026 ImageReduce. All rights reserved.</p>
+<p>
+<a href="#about">About</a>
+<a href="#privacy">Privacy Policy</a>
+<a href="#terms">Terms</a>
+</p>
+</footer>
+
+<script>
+let selectedFile=null;
+let originalImage=null;
+
+function loadImage(event){
+const file=event.target.files[0];
+if(!file)return;
+selectedFile=file;
+
+const reader=new FileReader();
+reader.onload=function(e){
+const img=new Image();
+img.onload=function(){
+originalImage=img;
+document.getElementById("previewImage").src=e.target.result;
+document.getElementById("originalSize").innerText=formatBytes(file.size);
+document.getElementById("originalDimensions").innerText=img.width+" × "+img.height;
+document.getElementById("imageWidth").value=img.width;
+document.getElementById("imageHeight").value=img.height;
+document.getElementById("toolContent").style.display="block";
+document.getElementById("result").style.display="none";
+};
+img.src=e.target.result;
+};
+reader.readAsDataURL(file);
+}
+
+function changeTargetSize(){
+const value=document.getElementById("targetSize").value;
+document.getElementById("customSizeBox").style.display=value==="custom"?"block":"none";
+}
+
+async function compressImage(){
+if(!selectedFile||!originalImage){
+alert("Please select an image first.");
+return;
+}
+
+let targetKB;
+const target=document.getElementById("targetSize").value;
+
+if(target==="custom"){
+targetKB=parseInt(document.getElementById("customSize").value);
+if(!targetKB||targetKB<=0){
+alert("Please enter a valid target size.");
+return;
+}
+}else{
+targetKB=parseInt(target);
+}
+
+const targetBytes=targetKB*1024;
+
+let width=parseInt(document.getElementById("imageWidth").value);
+let height=parseInt(document.getElementById("imageHeight").value);
+
+if(!width||!height){
+width=originalImage.width;
+height=originalImage.height;
+}
+
+let format=document.getElementById("outputFormat").value;
+
+if(format==="original"){
+format=selectedFile.type==="image/png"?"png":"jpeg";
+}
+
+const canvas=document.createElement("canvas");
+canvas.width=width;
+canvas.height=height;
+
+const ctx=canvas.getContext("2d");
+ctx.clearRect(0,0,width,height);
+ctx.drawImage(originalImage,0,0,width,height);
+
+let mimeType;
+if(format==="png")mimeType="image/png";
+else if(format==="webp")mimeType="image/webp";
+else mimeType="image/jpeg";
+
+if(format==="png"){
+canvas.toBlob(function(blob){
+showResult(blob,format);
+},mimeType);
+return;
+}
+
+let minQuality=.05;
+let maxQuality=1;
+let bestBlob=null;
+
+for(let i=0;i<12;i++){
+const quality=(minQuality+maxQuality)/2;
+const blob=await canvasToBlob(canvas,mimeType,quality);
+
+if(blob.size>targetBytes){
+maxQuality=quality;
+}else{
+bestBlob=blob;
+minQuality=quality;
+}
+}
+
+if(!bestBlob){
+bestBlob=await canvasToBlob(canvas,mimeType,.05);
+}
+
+showResult(bestBlob,format);
+}
+
+function canvasToBlob(canvas,type,quality){
+return new Promise(resolve=>{
+canvas.toBlob(resolve,type,quality);
+});
+}
+
+function showResult(blob,format){
+document.getElementById("resultOriginal").innerText=formatBytes(selectedFile.size);
+document.getElementById("resultNew").innerText=formatBytes(blob.size);
+
+let saving=((selectedFile.size-blob.size)/selectedFile.size)*100;
+if(saving<0)saving=0;
+
+document.getElementById("resultSaving").innerText=saving.toFixed(1)+"%";
+
+const url=URL.createObjectURL(blob);
+const downloadButton=document.getElementById("downloadButton");
+downloadButton.href=url;
+
+let extension=format==="png"?"png":format==="webp"?"webp":"jpg";
+downloadButton.download="reduced-image."+extension;
+
+document.getElementById("result").style.display="block";
+document.getElementById("result").scrollIntoView({behavior:"smooth"});
+}
+
+function formatBytes(bytes){
+if(bytes===0)return"0 Bytes";
+const sizes=["Bytes","KB","MB","GB"];
+const i=Math.floor(Math.log(bytes)/Math.log(1024));
+return parseFloat((bytes/Math.pow(1024,i)).toFixed(2))+" "+sizes[i];
+}
+</script>
+</body>
+</html>
