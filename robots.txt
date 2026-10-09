@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://akshayaicw100-debug.github.io/sitemap.xml

@@ -1,335 +1,118 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4167675455210380"
-     crossorigin="anonymous"></script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Image Size Reducer - Compress Images Online</title>
-<meta name="description" content="Reduce image size online for free. Compress JPG, JPEG and PNG images to a target file size without uploading them to a server.">
-<meta name="robots" content="index, follow">
-
-<style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f5f7fb;color:#222;line-height:1.6}
-header{background:#fff;border-bottom:1px solid #e5e7eb;padding:18px 20px}
-.navbar{max-width:1100px;margin:auto;display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:24px;font-weight:bold;color:#2563eb}
-nav a{color:#333;text-decoration:none;margin-left:22px}
-nav a:hover{color:#2563eb}
-.container{max-width:1000px;margin:auto;padding:30px 20px}
-.hero{text-align:center;margin:25px 0 30px}
-.hero h1{font-size:40px;margin-bottom:10px}
-.hero p{color:#666;font-size:18px}
-.ad-box{min-height:100px;background:#fff;border:1px solid #eee;display:flex;justify-content:center;align-items:center;color:#999;margin:25px 0}
-.tool{background:#fff;border-radius:14px;padding:30px;box-shadow:0 4px 20px rgba(0,0,0,.07)}
-.upload-area{border:2px dashed #2563eb;background:#f8fbff;border-radius:12px;padding:45px 20px;text-align:center;cursor:pointer}
-.upload-area:hover{background:#eff6ff}
-.upload-icon{font-size:45px}
-.upload-title{font-size:20px;font-weight:bold;color:#2563eb}
-.upload-subtitle{color:#777}
-#imageInput{display:none}
-#toolContent{display:none;margin-top:30px}
-.preview{text-align:center;margin-bottom:25px}
-.preview img{max-width:100%;max-height:350px;border-radius:8px;border:1px solid #ddd}
-.info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;margin-bottom:25px}
-.info-card{background:#f7f8fa;padding:18px;border-radius:9px;text-align:center}
-.info-card strong{display:block;margin-bottom:5px}
-.option-section,.resize-section{margin-top:25px}
-.option-section label,.resize-section label{font-weight:bold;display:block;margin-bottom:8px}
-select,input[type="number"]{width:100%;padding:12px;border:1px solid #ccc;border-radius:7px;font-size:15px;background:#fff}
-.custom-size{display:none;margin-top:12px}
-.resize-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
-.button{border:0;background:#2563eb;color:#fff;padding:14px 25px;font-size:16px;border-radius:7px;cursor:pointer;margin-top:25px;width:100%}
-.button:hover{background:#1d4ed8}
-.result{display:none;margin-top:30px;padding:20px;border-radius:10px;background:#f0fdf4;border:1px solid #bbf7d0;text-align:center}
-.result h3{margin-top:0}
-.saving{font-weight:bold;color:#15803d}
-.download-button{display:inline-block;margin-top:15px;background:#16a34a;color:#fff;text-decoration:none;padding:12px 25px;border-radius:7px}
-.download-button:hover{background:#15803d}
-.content{background:#fff;margin-top:30px;padding:30px;border-radius:12px}
-.content h2{color:#2563eb;margin-top:0}
-.content h3{margin-top:25px}
-footer{margin-top:50px;background:#1f2937;color:#fff;text-align:center;padding:30px 20px}
-footer a{color:#fff;text-decoration:none;margin:0 10px}
-@media(max-width:700px){
-.navbar{flex-direction:column;gap:15px}
-nav a{margin:0 8px}
-.hero h1{font-size:30px}
-.tool{padding:20px}
-.info-grid,.resize-grid{grid-template-columns:1fr}
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Image Reducer — Compress and Resize Images Free</title>
+  <meta name="description" content="Reduce image file size in your browser. Compress JPG, PNG and WebP images, resize dimensions, preview the result and download your optimized image.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://akshayaicw100-debug.github.io/">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script defer src="assets/app.js"></script>
+  <meta name="theme-color" content="#f5f7fb">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebApplication",
+    "name":"Image Reducer",
+    "url":"https://akshayaicw100-debug.github.io/",
+    "applicationCategory":"MultimediaApplication",
+    "operatingSystem":"Any",
+    "description":"A browser-based image compression and resizing tool with practical image optimization guides.",
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}
+  }
+  </script>
 </head>
-
 <body>
-<header>
-<div class="navbar">
-<div class="logo">ImageReduce</div>
-<nav>
-<a href="#tool">Tool</a>
-<a href="#about">About</a>
-<a href="#privacy">Privacy</a>
-<a href="#terms">Terms</a>
-</nav>
-</div>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="Image Reducer home"><span class="brand-mark">IR</span><span>Image Reducer</span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <nav id="nav-links" class="nav-links" aria-label="Main navigation">
+      <a href="index.html">Home & Tool</a><a href="guides/how-to-compress-images.html">How-to Guide</a><a href="guides/jpg-png-webp.html">Image Formats</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+    </nav>
+  </div>
 </header>
-
-<main class="container">
+<main>
 <section class="hero">
-<h1>Image Size Reducer</h1>
-<p>Reduce image file size online quickly and easily.</p>
+  <div class="container hero-grid">
+    <div>
+      <p class="eyebrow">FREE • SIMPLE • BROWSER-BASED</p>
+      <h1>Make images smaller. Keep the details that matter.</h1>
+      <p class="lead">Compress and resize image files before uploading them to a website, sending them by email, or storing them. Choose your settings, preview the result, and download when you're happy.</p>
+      <a class="button button-secondary" href="#image-tool">Start reducing an image</a>
+      <p class="small-note">Your image is processed in your browser by this tool; it is not intentionally uploaded to our server. Avoid using a shared device for private images.</p>
+    </div>
+    <div class="hero-card" aria-label="Image optimization overview">
+      <div class="mock-photo"><span>IMAGE</span></div>
+      <div class="mock-stats"><div><span class="stat-label">Goal</span><strong>Smaller file</strong></div><div><span class="stat-label">Control</span><strong>Your settings</strong></div><div><span class="stat-label">Preview</span><strong>Before download</strong></div></div>
+    </div>
+  </div>
 </section>
-
-<div class="ad-box">Advertisement</div>
-
-<section class="tool" id="tool">
-<div class="upload-area" onclick="document.getElementById('imageInput').click()">
-<div class="upload-icon">🖼️</div>
-<div class="upload-title">Click to Upload Image</div>
-<div class="upload-subtitle">JPG, JPEG or PNG</div>
-<input type="file" id="imageInput" accept="image/jpeg,image/jpg,image/png" onchange="loadImage(event)">
-</div>
-
-<div id="toolContent">
-<div class="preview"><img id="previewImage" alt="Selected image preview"></div>
-
-<div class="info-grid">
-<div class="info-card"><strong>Original Size</strong><span id="originalSize">-</span></div>
-<div class="info-card"><strong>Original Dimensions</strong><span id="originalDimensions">-</span></div>
-</div>
-
-<div class="option-section">
-<label for="targetSize">Target Image Size</label>
-<select id="targetSize" onchange="changeTargetSize()">
-<option value="50">50 KB</option>
-<option value="100">100 KB</option>
-<option value="200">200 KB</option>
-<option value="500">500 KB</option>
-<option value="1024">1 MB</option>
-<option value="custom">Custom Size</option>
-</select>
-<div class="custom-size" id="customSizeBox">
-<input type="number" id="customSize" placeholder="Enter size in KB" min="1">
-</div>
-</div>
-
-<div class="resize-section">
-<label>Image Dimensions</label>
-<div class="resize-grid">
-<input type="number" id="imageWidth" placeholder="Width in pixels" min="1">
-<input type="number" id="imageHeight" placeholder="Height in pixels" min="1">
-</div>
-<p style="color:#777;font-size:14px">Leave these empty to keep the original dimensions.</p>
-</div>
-
-<div class="option-section">
-<label for="outputFormat">Output Format</label>
-<select id="outputFormat">
-<option value="original">Keep Original Format</option>
-<option value="jpeg">JPG / JPEG</option>
-<option value="png">PNG</option>
-<option value="webp">WebP</option>
-</select>
-</div>
-
-<button class="button" onclick="compressImage()">Reduce Image Size</button>
-
-<div class="result" id="result">
-<h3>Image Successfully Reduced</h3>
-<p>Original Size: <strong id="resultOriginal">-</strong></p>
-<p>New Size: <strong id="resultNew">-</strong></p>
-<p>Size Saved: <span class="saving" id="resultSaving">-</span></p>
-<a id="downloadButton" class="download-button" download="reduced-image">Download Reduced Image</a>
-</div>
-</div>
+<section class="section" id="image-tool">
+  <div class="container">
+    <div class="section-heading"><p class="eyebrow">IMAGE TOOL</p><h2>Compress or resize your image</h2><p>Select an image from your device. The tool supports JPG, PNG and WebP input. Output options and results depend on your browser and the selected image.</p></div>
+    <div class="tool-card">
+      <label class="upload-zone" for="imageInput"><span class="upload-icon" aria-hidden="true">＋</span><strong>Choose an image</strong><span>JPG, PNG or WebP • Processed in your browser</span><input id="imageInput" type="file" accept="image/jpeg,image/png,image/webp"></label>
+      <p id="status" class="status" role="status" aria-live="polite">Choose an image to begin.</p>
+      <div id="settings" class="settings" hidden>
+        <div class="settings-grid">
+          <div><label for="format">Output format</label><select id="format"><option value="image/webp">WebP (usually smaller)</option><option value="image/jpeg">JPEG</option><option value="image/png">PNG (may not reduce size)</option></select></div>
+          <div><label for="quality">Quality: <span id="qualityValue">80%</span></label><input id="quality" type="range" min="10" max="100" value="80"><p class="field-help">Quality affects JPEG and WebP output. PNG is lossless and ignores this slider.</p></div>
+          <div><label for="maxWidth">Maximum width (px)</label><input id="maxWidth" type="number" min="1" max="12000" placeholder="Original width"></div>
+          <div><label for="maxHeight">Maximum height (px)</label><input id="maxHeight" type="number" min="1" max="12000" placeholder="Original height"></div>
+        </div>
+        <div class="button-row"><button id="compressBtn" class="button" type="button">Compress image</button><button id="resetBtn" class="button button-secondary" type="button">Reset</button></div>
+        <div id="results" class="results" hidden>
+          <div class="result-stats"><div><span class="stat-label">Original</span><strong id="originalSize">—</strong></div><div><span class="stat-label">New file</span><strong id="newSize">—</strong></div><div><span class="stat-label">Change</span><strong id="savedSize">—</strong></div></div>
+          <div class="preview-grid"><figure><img id="originalPreview" alt="Original image preview"><figcaption>Original image</figcaption></figure><figure><img id="newPreview" alt="Compressed image preview"><figcaption>Compressed preview</figcaption></figure></div>
+          <p id="resultNote" class="field-help"></p><a id="downloadBtn" class="button" download="compressed-image.webp" href="#">Download compressed image</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-
-<div class="ad-box">Advertisement</div>
-
-<section class="content" id="about">
-<h2>What is an Image Size Reducer?</h2>
-<p>An image size reducer helps reduce the file size of an image while keeping the image as clear as possible.</p>
-
-<h2>How to Reduce Image Size?</h2>
-<p>Upload your image, select the target file size, choose the output format and click the "Reduce Image Size" button.</p>
-
-<h3>Supported Image Formats</h3>
-<p>This tool supports JPG, JPEG and PNG images. You can also convert images to WebP format.</p>
-
-<h3>Is My Image Uploaded to a Server?</h3>
-<p>No. Image processing is performed directly inside your web browser. Your image does not need to be uploaded to our server.</p>
-
-<h3>Why Reduce Image Size?</h3>
-<p>Smaller image files use less storage space and are easier to share through email, messaging applications and websites.</p>
+<section class="section section-tint">
+  <div class="container">
+    <div class="section-heading"><p class="eyebrow">WHY IMAGE SIZE MATTERS</p><h2>What does image compression do?</h2><p>Image compression changes how image information is stored so a file may take up less space. Depending on the format and settings, some visual information can be discarded or the image may be stored without that type of quality loss.</p></div>
+    <div class="three-cards">
+      <article class="info-card"><h3>Faster uploads</h3><p>A smaller file can be easier to attach to an email, upload to a form, or share when a service has a file-size limit.</p></article>
+      <article class="info-card"><h3>Website performance</h3><p>Optimized images can reduce the amount of data a webpage needs to load. Also choose appropriate dimensions and use responsive images on your website.</p></article>
+      <article class="info-card"><h3>More control</h3><p>Preview the result before downloading. If text, edges or fine details look poor, try a higher quality setting or a different format.</p></article>
+    </div>
+  </div>
 </section>
-
-<section class="content" id="privacy">
-<h2>Privacy Policy</h2>
-<p>We respect your privacy. Images selected for compression are processed directly in your browser. We do not require users to create an account to use this tool.</p>
-<p>This website may use third-party advertising services such as Google AdSense. Advertising services may use cookies or similar technologies according to their own policies.</p>
+<section class="section">
+  <div class="container content-narrow">
+    <p class="eyebrow">HOW TO USE IT</p><h2>How to reduce an image file size</h2>
+    <ol class="steps">
+      <li><strong>Select your image.</strong> Choose a JPG, PNG or WebP file stored on your device.</li>
+      <li><strong>Choose an output format.</strong> WebP can produce smaller files for many images; JPEG is widely supported for photographs; PNG is useful when transparency or crisp graphics matter.</li>
+      <li><strong>Set quality and dimensions.</strong> Lower quality can reduce file size but may introduce visible artifacts. Reducing width and height can also make the file much smaller.</li>
+      <li><strong>Compress and compare.</strong> Review the file-size figures and preview the result. A conversion can sometimes create a larger file, especially for simple graphics or when using PNG.</li>
+      <li><strong>Download only when satisfied.</strong> Keep the original file if you may need to make a different version later.</li>
+    </ol>
+    <p>For more detail, read our guides: <a href="guides/how-to-compress-images.html">How to compress images step by step</a> and <a href="guides/jpg-png-webp.html">JPG vs PNG vs WebP</a>.</p>
+  </div>
 </section>
-
-<section class="content" id="terms">
-<h2>Terms and Conditions</h2>
-<p>This website is provided for general image compression purposes. Users are responsible for the images they process using this tool.</p>
-<p>We do not guarantee that every image will reach the exact requested file size or retain the exact original quality after compression.</p>
+<section class="section section-tint">
+  <div class="container content-narrow">
+    <h2>Frequently asked questions</h2>
+    <details><summary>Are my images uploaded to a server?</summary><p>The compression operation in this page uses your browser's image and canvas features. The page does not contain code to upload the selected image to our server. Your browser, extensions or device environment may have their own behavior, so use a trusted device for sensitive files.</p></details>
+    <details><summary>Will compression always make a file smaller?</summary><p>No. Results depend on the original file, image dimensions, format and quality. A format conversion may create a larger file. Compare the results before downloading.</p></details>
+    <details><summary>Does a lower quality setting mean a better result?</summary><p>No. A lower quality setting usually means a smaller JPEG or WebP file but can also make details less clear. Choose a setting that balances appearance and file size for your use.</p></details>
+    <details><summary>Why does PNG sometimes stay large?</summary><p>PNG is lossless and works well for transparency, interface graphics and sharp-edged artwork. For photographs, JPEG or WebP may often provide a smaller file, depending on the image.</p></details>
+    <details><summary>Can I use the tool on a phone?</summary><p>Yes, in a modern browser. Large images may take longer to process or use substantial device memory. If a file fails, try a smaller image or another browser.</p></details>
+  </div>
 </section>
-
-<div class="ad-box">Advertisement</div>
+<section class="section">
+  <div class="container content-narrow">
+    <h2>Use image compression thoughtfully</h2>
+    <p>Keep an untouched copy of important images. Avoid repeatedly saving a lossy image, because each new lossy export can reduce quality further. For documents, screenshots and graphics containing small text, inspect the preview carefully before replacing the original. If a website or application specifies a maximum size or format, follow its instructions first.</p>
+    <p class="small-note">Image Reducer is an independent utility and is not affiliated with Google or any third-party platform. Compression results are not guaranteed to meet every website's requirements.</p>
+  </div>
+</section>
 </main>
-
-<footer>
-<p>© 2026 ImageReduce. All rights reserved.</p>
-<p>
-<a href="#about">About</a>
-<a href="#privacy">Privacy Policy</a>
-<a href="#terms">Terms</a>
-</p>
-</footer>
-
-<script>
-let selectedFile=null;
-let originalImage=null;
-
-function loadImage(event){
-const file=event.target.files[0];
-if(!file)return;
-selectedFile=file;
-
-const reader=new FileReader();
-reader.onload=function(e){
-const img=new Image();
-img.onload=function(){
-originalImage=img;
-document.getElementById("previewImage").src=e.target.result;
-document.getElementById("originalSize").innerText=formatBytes(file.size);
-document.getElementById("originalDimensions").innerText=img.width+" × "+img.height;
-document.getElementById("imageWidth").value=img.width;
-document.getElementById("imageHeight").value=img.height;
-document.getElementById("toolContent").style.display="block";
-document.getElementById("result").style.display="none";
-};
-img.src=e.target.result;
-};
-reader.readAsDataURL(file);
-}
-
-function changeTargetSize(){
-const value=document.getElementById("targetSize").value;
-document.getElementById("customSizeBox").style.display=value==="custom"?"block":"none";
-}
-
-async function compressImage(){
-if(!selectedFile||!originalImage){
-alert("Please select an image first.");
-return;
-}
-
-let targetKB;
-const target=document.getElementById("targetSize").value;
-
-if(target==="custom"){
-targetKB=parseInt(document.getElementById("customSize").value);
-if(!targetKB||targetKB<=0){
-alert("Please enter a valid target size.");
-return;
-}
-}else{
-targetKB=parseInt(target);
-}
-
-const targetBytes=targetKB*1024;
-
-let width=parseInt(document.getElementById("imageWidth").value);
-let height=parseInt(document.getElementById("imageHeight").value);
-
-if(!width||!height){
-width=originalImage.width;
-height=originalImage.height;
-}
-
-let format=document.getElementById("outputFormat").value;
-
-if(format==="original"){
-format=selectedFile.type==="image/png"?"png":"jpeg";
-}
-
-const canvas=document.createElement("canvas");
-canvas.width=width;
-canvas.height=height;
-
-const ctx=canvas.getContext("2d");
-ctx.clearRect(0,0,width,height);
-ctx.drawImage(originalImage,0,0,width,height);
-
-let mimeType;
-if(format==="png")mimeType="image/png";
-else if(format==="webp")mimeType="image/webp";
-else mimeType="image/jpeg";
-
-if(format==="png"){
-canvas.toBlob(function(blob){
-showResult(blob,format);
-},mimeType);
-return;
-}
-
-let minQuality=.05;
-let maxQuality=1;
-let bestBlob=null;
-
-for(let i=0;i<12;i++){
-const quality=(minQuality+maxQuality)/2;
-const blob=await canvasToBlob(canvas,mimeType,quality);
-
-if(blob.size>targetBytes){
-maxQuality=quality;
-}else{
-bestBlob=blob;
-minQuality=quality;
-}
-}
-
-if(!bestBlob){
-bestBlob=await canvasToBlob(canvas,mimeType,.05);
-}
-
-showResult(bestBlob,format);
-}
-
-function canvasToBlob(canvas,type,quality){
-return new Promise(resolve=>{
-canvas.toBlob(resolve,type,quality);
-});
-}
-
-function showResult(blob,format){
-document.getElementById("resultOriginal").innerText=formatBytes(selectedFile.size);
-document.getElementById("resultNew").innerText=formatBytes(blob.size);
-
-let saving=((selectedFile.size-blob.size)/selectedFile.size)*100;
-if(saving<0)saving=0;
-
-document.getElementById("resultSaving").innerText=saving.toFixed(1)+"%";
-
-const url=URL.createObjectURL(blob);
-const downloadButton=document.getElementById("downloadButton");
-downloadButton.href=url;
-
-let extension=format==="png"?"png":format==="webp"?"webp":"jpg";
-downloadButton.download="reduced-image."+extension;
-
-document.getElementById("result").style.display="block";
-document.getElementById("result").scrollIntoView({behavior:"smooth"});
-}
-
-function formatBytes(bytes){
-if(bytes===0)return"0 Bytes";
-const sizes=["Bytes","KB","MB","GB"];
-const i=Math.floor(Math.log(bytes)/Math.log(1024));
-return parseFloat((bytes/Math.pow(1024,i)).toFixed(2))+" "+sizes[i];
-}
-</script>
+<footer class="site-footer"><div class="container footer-grid"><div><a class="brand" href="index.html"><span class="brand-mark">IR</span><span>Image Reducer</span></a><p class="small-note">A simple browser-based image optimization utility with practical guides.</p></div><nav class="footer-links" aria-label="Footer navigation"><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a><a href="guides/how-to-compress-images.html">Compression Guide</a><a href="guides/jpg-png-webp.html">Image Formats Guide</a></nav></div><div class="container footer-bottom">© <span id="year"></span> Image Reducer. All rights reserved.</div></footer>
 </body>
 </html>
