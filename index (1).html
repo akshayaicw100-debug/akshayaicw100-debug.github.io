@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Free Image Tools helps you resize, crop, compress and convert images in your browser. Simple, fast and free image editing for everyday use.">
+<meta name="theme-color" content="#f7f8fc">
+<title>Free Image Tools — Resize, Crop, Compress & Convert</title>
+<style>
+:root{--ink:#182230;--muted:#667085;--line:#e4e7ec;--bg:#f7f8fc;--card:#fff;--brand:#4255d4;--brand2:#eef0ff;--green:#16794b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}a{color:var(--brand)}button,input,select{font:inherit}button{cursor:pointer}.wrap{width:min(1120px,92%);margin:auto}.topbar{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:72px;flex-wrap:wrap}.brand{font-size:1.15rem;font-weight:800;color:var(--ink);text-decoration:none;letter-spacing:-.03em}.brand span{color:var(--brand)}.navlinks{display:flex;gap:6px;flex-wrap:wrap}.navlinks button{border:0;background:transparent;padding:9px 12px;border-radius:9px;color:#344054}.navlinks button:hover,.navlinks button.active{background:var(--brand2);color:var(--brand)}.hero{text-align:center;padding:52px 0 26px}.eyebrow{color:var(--brand);font-size:.82rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em}.hero h1{font-size:clamp(2rem,5vw,3.3rem);line-height:1.12;letter-spacing:-.045em;margin:12px auto;max-width:780px}.hero p{max-width:690px;margin:0 auto;color:var(--muted);font-size:1.08rem}.toolnav{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:22px 0}.toolnav button{border:1px solid var(--line);background:#fff;border-radius:14px;padding:14px 10px;font-weight:750;color:var(--ink)}.toolnav button.active{border-color:var(--brand);background:var(--brand2);color:var(--brand)}.toolnav small{display:block;font-weight:500;color:var(--muted);font-size:.78rem}.panel,.content-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:clamp(18px,3vw,30px);box-shadow:0 8px 28px rgba(16,24,40,.035);margin-bottom:22px}.panel h2,.content-card h2{margin:0 0 6px;font-size:1.35rem}.sub{color:var(--muted);margin:0 0 20px}.upload{display:block;border:2px dashed #c7ccef;background:#fafaff;border-radius:15px;padding:25px;text-align:center;cursor:pointer}.upload strong{display:block;font-size:1.08rem}.upload span{color:var(--muted);font-size:.9rem}.upload input{display:block;max-width:100%;margin:12px auto 0}.workspace{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(260px,.9fr);gap:24px;margin-top:22px}.preview{min-height:240px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(45deg,#f5f6fa 25%,transparent 25%),linear-gradient(-45deg,#f5f6fa 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#f5f6fa 75%),linear-gradient(-45deg,transparent 75%,#f5f6fa 75%);background-size:20px 20px;background-position:0 0,0 10px,10px -10px,-10px 0;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:12px}.preview img{max-width:100%;max-height:390px;object-fit:contain}.empty{text-align:center;color:var(--muted);padding:24px}.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.field{display:flex;flex-direction:column;gap:5px}.field label{font-size:.88rem;font-weight:700}.field input,.field select{width:100%;border:1px solid #d0d5dd;border-radius:9px;padding:10px;background:#fff;color:var(--ink)}.check{display:flex;align-items:center;gap:9px;margin:12px 0;color:#344054}.check input{width:17px;height:17px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.btn{border:1px solid var(--line);background:#fff;border-radius:10px;padding:11px 16px;font-weight:750;color:var(--ink)}.btn.primary{background:var(--brand);border-color:var(--brand);color:#fff}.btn:disabled{opacity:.45;cursor:not-allowed}.status{margin-top:14px;padding:11px 13px;background:#f2f4f7;border-radius:10px;color:#475467;font-size:.92rem;overflow-wrap:anywhere}.status.good{background:#ecfdf3;color:var(--green)}.status.error{background:#fef3f2;color:#b42318}.meta{font-size:.86rem;color:var(--muted);margin-top:10px}.tool-options[hidden],.page[hidden]{display:none}.page{padding-top:32px}.content-card p,.content-card li{color:#475467}.content-card h3{margin-bottom:4px}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.step{background:#f8f9ff;border-radius:12px;padding:16px}.step b{display:block;margin-bottom:5px}.footer{margin-top:48px;background:#fff;border-top:1px solid var(--line);padding:28px 0}.footrow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footlinks{display:flex;gap:15px;flex-wrap:wrap}.footlinks button{border:0;background:none;color:var(--muted);padding:0;text-decoration:underline}.fine{font-size:.85rem;color:var(--muted);margin-top:12px}.ad-slot{display:none;min-height:90px;margin:20px 0;text-align:center;color:#98a2b3;border:1px dashed var(--line);border-radius:10px;padding:10px}@media(max-width:760px){.workspace{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.nav{padding:10px 0}.navlinks{width:100%}.navlinks button{padding:8px}.toolnav{gap:6px}.toolnav button{padding:11px 4px;font-size:.9rem}.toolnav small{font-size:.7rem}}@media(max-width:430px){.fields{grid-template-columns:1fr}.hero{padding-top:35px}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap nav">
+<a href="#home" class="brand" aria-label="Free Image Tools home">Free<span>Image</span>Tools</a>
+<nav class="navlinks" aria-label="Main navigation">
+<button data-page="home" class="active">Home</button><button data-page="about">About Us</button><button data-page="how">How to Use</button><button data-page="privacy">Privacy</button><button data-page="terms">Terms</button><button data-page="contact">Contact</button>
+</nav></div></header>
+<main class="wrap">
+<section id="home" class="page">
+<div class="hero"><div class="eyebrow">Simple tools. Right in your browser.</div><h1>Resize, crop, compress and convert images</h1><p>Prepare images for websites, documents, forms and social media with free, easy-to-use image tools. Your selected image is processed in your browser and is not uploaded by this page to a server.</p></div>
+<div class="toolnav" role="tablist" aria-label="Image tools">
+<button class="active" data-tool="resize" role="tab" aria-selected="true">↔ Resize<small>Change dimensions</small></button>
+<button data-tool="crop" role="tab" aria-selected="false">▧ Crop<small>Trim an image</small></button>
+<button data-tool="compress" role="tab" aria-selected="false">⇩ Compress<small>Reduce file size</small></button>
+<button data-tool="convert" role="tab" aria-selected="false">⇄ Convert<small>Change format</small></button>
+</div>
+<section class="panel" aria-labelledby="tool-title">
+<h2 id="tool-title">Resize your image</h2><p class="sub" id="tool-description">Set the output width and height in pixels.</p>
+<label class="upload"><strong>Choose an image to get started</strong><span>JPG, JPEG, PNG, WebP, GIF, BMP and SVG files (SVG is rasterized for editing/export)</span><input id="fileInput" type="file" accept="image/*,.svg" aria-label="Choose an image"></label>
+<div class="workspace">
+<div><div class="preview" id="preview"><div class="empty">Your image preview will appear here.</div></div><div class="meta" id="imageMeta">No image selected.</div></div>
+<div>
+<div class="tool-options" id="options-resize">
+<div class="fields"><div class="field"><label for="width">Width (px)</label><input id="width" type="number" min="1" max="12000" placeholder="e.g. 1200"></div><div class="field"><label for="height">Height (px)</label><input id="height" type="number" min="1" max="12000" placeholder="e.g. 800"></div></div>
+<label class="check"><input type="checkbox" id="keepRatio" checked> Keep aspect ratio</label>
+</div>
+<div class="tool-options" id="options-crop" hidden>
+<p class="meta">Enter a crop rectangle in the original image's pixel coordinates. The area must fit inside the image.</p>
+<div class="fields"><div class="field"><label for="cropX">Start X</label><input id="cropX" type="number" min="0" value="0"></div><div class="field"><label for="cropY">Start Y</label><input id="cropY" type="number" min="0" value="0"></div><div class="field"><label for="cropW">Crop width</label><input id="cropW" type="number" min="1" placeholder="Width"></div><div class="field"><label for="cropH">Crop height</label><input id="cropH" type="number" min="1" placeholder="Height"></div></div>
+</div>
+<div class="tool-options" id="options-compress" hidden>
+<div class="field"><label for="quality">Image quality: <span id="qualityValue">75%</span></label><input id="quality" type="range" min="10" max="100" value="75"></div><p class="meta">Lower quality often means a smaller file. This mainly affects JPEG and WebP; PNG is usually lossless.</p>
+</div>
+<div class="tool-options" id="options-convert" hidden>
+<div class="field"><label for="format">Output format</label><select id="format"><option value="image/jpeg">JPG / JPEG</option><option value="image/png">PNG</option><option value="image/webp">WebP</option></select></div><p class="meta">SVG files can be opened as input, but this browser-based tool exports edited images as raster formats (JPG, PNG or WebP), not as new SVG vector artwork. Animated GIFs export as a still image.</p>
+</div>
+<div class="actions"><button class="btn primary" id="processBtn" disabled>Process image</button><button class="btn" id="downloadBtn" disabled>Download image</button><button class="btn" id="resetBtn">Reset</button></div>
+<div id="status" class="status" role="status" aria-live="polite">Choose an image to begin. Your image stays in this browser during processing.</div>
+</div></div>
+</section>
+<div class="ad-slot" aria-label="Advertisement area">Advertisement</div>
+<section class="content-card"><h2>Free online image tools for everyday tasks</h2><p>Images often need different dimensions, file sizes or formats before they can be uploaded to a website, added to a document or shared online. Free Image Tools brings four common image tasks together in one straightforward place.</p><div class="steps"><div class="step"><b>1. Choose a file</b><span>Pick an image from your device and check the preview.</span></div><div class="step"><b>2. Select a tool</b><span>Resize, crop, compress or convert, then enter your settings.</span></div><div class="step"><b>3. Process and save</b><span>Check the result and download the output to your device.</span></div></div></section>
+<section class="content-card"><h2>Which image format should I use?</h2><ul><li><b>JPG/JPEG:</b> commonly used for photographs and smaller photo files; transparency is not supported.</li><li><b>PNG:</b> useful for graphics, screenshots and images that need transparency; files can be larger.</li><li><b>WebP:</b> a modern web image format that can provide good quality at smaller file sizes.</li><li><b>SVG:</b> a vector format used for logos and illustrations. This tool can load SVGs for raster output, but it does not create editable vector SVGs.</li></ul><p>Always keep a copy of your original file before editing. The best format and settings depend on where the image will be used.</p></section>
+</section>
+<section id="about" class="page" hidden><div class="content-card"><h2>About Us</h2><p>Free Image Tools was created in 2026 from the idea of making everyday image resizing, cropping, compression and conversion accessible through a simple, free online website.</p><p>The aim is to make common image tasks understandable for students, creators, small businesses and anyone who needs to prepare an image for a website, form, presentation or personal project. The interface is designed to keep the main tools easy to find, with clear settings and a direct download option.</p><p>Image processing on this page takes place locally in your browser. Files are not intentionally uploaded by this tool to a processing server. Please test the website on different devices and browsers and contact us if you notice a problem.</p><p><b>Created:</b> 2026<br><b>Website:</b> Free Image Tools<br><b>Contact:</b> Replace the example email on the Contact page with your real contact email before publishing.</p></div></section>
+<section id="how" class="page" hidden><div class="content-card"><h2>How to Use Free Image Tools</h2><h3>Resize an image</h3><ol><li>Open the Resize tab and choose an image.</li><li>Enter the required width and height in pixels.</li><li>Keep “Keep aspect ratio” selected to avoid stretching the image. If you change the width, the height adjusts automatically.</li><li>Select Process image, review the output, and download it.</li></ol><h3>Crop an image</h3><ol><li>Choose the Crop tab and upload your image.</li><li>Enter Start X and Start Y to choose the top-left point of the crop area.</li><li>Enter the crop width and height in pixels. Keep the rectangle within the original image dimensions.</li><li>Process and download the cropped result.</li></ol><h3>Compress an image</h3><ol><li>Choose Compress and upload your image.</li><li>Move the quality slider lower for a smaller output file, or higher to preserve more detail.</li><li>Process the image and compare the output file size with the original.</li><li>Download the result if it meets your needs.</li></ol><h3>Convert an image</h3><ol><li>Choose Convert and select an image.</li><li>Choose JPG, PNG or WebP as the output format.</li><li>Process the image, then download it. Choose PNG if you need transparent areas to remain transparent.</li></ol><h3>Helpful notes</h3><ul><li>Very large images may take longer or exceed your browser's available memory.</li><li>JPG does not preserve transparency; transparent areas may appear with a white background.</li><li>Animated GIFs are exported as a still image.</li><li>SVG files are rendered to pixels for output; this tool does not preserve vector editability.</li><li>Keep your original image until you have checked the downloaded file.</li></ul></div></section>
+<section id="privacy" class="page" hidden><div class="content-card"><h2>Privacy Policy</h2><p><b>Last updated:</b> October 16, 2026</p><p>Free Image Tools is designed to process selected images locally in your web browser. The image-processing code in this page does not intentionally send your selected image to our server. Your browser may keep temporary image data in memory while the page is open.</p><h3>Information you provide</h3><p>If you contact us by email, we will receive the information you choose to include in that message and use it to respond. Add your real contact email and update this policy to accurately describe any forms, analytics or other services you actually use.</p><h3>Cookies, analytics and advertising</h3><p>This website may use third-party services such as Google AdSense or analytics tools if the owner configures them. Those providers may use cookies or similar technologies as described in their own policies. Before enabling advertising, update this policy to reflect the services used, provide any required consent or privacy controls for your visitors, and link to the relevant provider policies.</p><h3>Children and data</h3><p>Do not upload sensitive or confidential images to any online tool unless you are comfortable with the way it works. We do not knowingly request personal information from children through this tool.</p><h3>Policy updates</h3><p>This policy may be updated when the website's features or services change. The revised date will be shown at the top of this page. This template is general information, not legal advice; the site owner is responsible for making it accurate for the actual website and applicable laws.</p></div></section>
+<section id="terms" class="page" hidden><div class="content-card"><h2>Terms of Use</h2><p><b>Last updated:</b> October 16, 2026</p><p>By using Free Image Tools, you agree to use the website lawfully and responsibly. The tools are provided free of charge for general image editing tasks.</p><h3>Your files and rights</h3><p>You are responsible for ensuring that you have the right to use and edit any image you select. Do not use the website to infringe copyright, violate another person's privacy or break applicable law.</p><h3>Availability and results</h3><p>The website is provided on an “as available” basis. Results can vary by browser, image type and selected settings. We do not guarantee that every image or format will work perfectly. Keep a backup of original files and verify downloaded results before using them.</p><h3>Limitation</h3><p>To the extent permitted by applicable law, the website owner is not responsible for data loss, unexpected output or interruptions resulting from use of this tool. Nothing in these terms excludes rights that cannot legally be excluded.</p><h3>Changes</h3><p>Features and these terms may change as the website develops. Continued use after a change means you accept the updated terms to the extent permitted by law.</p></div></section>
+<section id="contact" class="page" hidden><div class="content-card"><h2>Contact Us</h2><p>Questions, suggestions or reports of a problem are welcome. Replace the example address below with an email address that you own and check regularly before publishing this website.</p><p><b>Email:</b> <a href="mailto:YOUR-EMAIL@example.com">YOUR-EMAIL@example.com</a></p><p>When reporting a problem, please tell us which tool you used, which browser you are using, and what happened. Do not email private or sensitive images unless necessary and safe to do so.</p><p><b>Website:</b> Free Image Tools<br><b>Created:</b> 2026</p></div></section>
+</main>
+<footer class="footer"><div class="wrap"><div class="footrow"><a href="#home" class="brand">Free<span>Image</span>Tools</a><div class="footlinks"><button data-page="about">About Us</button><button data-page="how">How to Use</button><button data-page="privacy">Privacy Policy</button><button data-page="terms">Terms of Use</button><button data-page="contact">Contact</button></div></div><p class="fine">Free Image Tools · Created in 2026. This website is an independent tool and is not affiliated with Google.</p><p class="fine">Images are processed in your browser. Please verify your output before relying on it.</p></div></footer>
+<script>
+(() => {
+const $=id=>document.getElementById(id);
+let file=null, image=null, imageURL=null, outputURL=null, outputBlob=null, outputName='image';
+let activeTool='resize', baseCanvas=null;
+const toolCopy={
+ resize:['Resize your image','Set the output width and height in pixels.'],
+ crop:['Crop your image','Choose a crop rectangle using pixel coordinates.'],
+ compress:['Compress your image','Adjust output quality to reduce file size.'],
+ convert:['Convert your image','Save your image as JPG, PNG or WebP.']
+};
+function status(message,type=''){const el=$('status');el.textContent=message;el.className='status'+(type?' '+type:'');}
+function fmt(bytes){if(bytes<1024)return bytes+' B';if(bytes<1048576)return (bytes/1024).toFixed(1)+' KB';return (bytes/1048576).toFixed(2)+' MB';}
+function clearOutput(){if(outputURL)URL.revokeObjectURL(outputURL);outputURL=null;outputBlob=null;$('downloadBtn').disabled=true;}
+function selectTool(tool){
+ activeTool=tool;
+ document.querySelectorAll('[data-tool]').forEach(b=>{let on=b.dataset.tool===tool;b.classList.toggle('active',on);b.setAttribute('aria-selected',String(on));});
+ ['resize','crop','compress','convert'].forEach(t=>$('options-'+t).hidden=t!==tool);
+ $('tool-title').textContent=toolCopy[tool][0];$('tool-description').textContent=toolCopy[tool][1];
+ clearOutput();status(file?'Ready to process your image.':'Choose an image to begin.');
+}
+document.querySelectorAll('[data-tool]').forEach(b=>b.addEventListener('click',()=>selectTool(b.dataset.tool)));
+function showPage(page){
+ document.querySelectorAll('.page').forEach(p=>p.hidden=p.id!==page);
+ document.querySelectorAll('[data-page]').forEach(b=>b.classList.toggle('active',b.dataset.page===page));
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+document.querySelectorAll('[data-page]').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.page)));
+document.querySelectorAll('a.brand').forEach(a=>a.addEventListener('click',()=>showPage('home')));
+function setImageMeta(){if(!image||!file)return;$('imageMeta').textContent=`Original: ${image.naturalWidth} × ${image.naturalHeight} px · ${fmt(file.size)} · ${file.type||'image file'}`;}
+$('fileInput').addEventListener('change',()=>{
+ const chosen=$('fileInput').files[0];if(!chosen)return;
+ if(!chosen.type.startsWith('image/')&&!/\.svg$/i.test(chosen.name)){status('Please choose a valid image file.','error');return;}
+ if(chosen.size>25*1024*1024){status('This file is larger than 25 MB. Please choose a smaller image.','error');$('fileInput').value='';return;}
+ file=chosen;clearOutput();if(imageURL)URL.revokeObjectURL(imageURL);imageURL=URL.createObjectURL(file);
+ const im=new Image();
+ im.onload=()=>{
+ image=im;baseCanvas=document.createElement('canvas');baseCanvas.width=im.naturalWidth;baseCanvas.height=im.naturalHeight;
+ const ctx=baseCanvas.getContext('2d');ctx.drawImage(im,0,0);
+ $('preview').innerHTML='';const previewImage=document.createElement('img');previewImage.src=imageURL;previewImage.alt='Selected image preview';$('preview').appendChild(previewImage);
+ $('width').value=im.naturalWidth;$('height').value=im.naturalHeight;$('cropW').value=im.naturalWidth;$('cropH').value=im.naturalHeight;$('cropX').value=0;$('cropY').value=0;
+ $('processBtn').disabled=false;setImageMeta();status('Image loaded. Choose your settings and select Process image.','good');
+ };
+ im.onerror=()=>status('This image could not be opened by your browser. Try a JPG or PNG file.','error');
+ im.src=imageURL;
+});
+$('width').addEventListener('input',()=>{if($('keepRatio').checked&&image&&+$('width').value>0)$('height').value=Math.max(1,Math.round(+$('width').value*image.naturalHeight/image.naturalWidth));});
+$('height').addEventListener('input',()=>{if($('keepRatio').checked&&image&&+$('height').value>0)$('width').value=Math.max(1,Math.round(+$('height').value*image.naturalWidth/image.naturalHeight));});
+$('quality').addEventListener('input',()=>$('qualityValue').textContent=$('quality').value+'%');
+function canvasBlob(canvas,type,quality){return new Promise((resolve,reject)=>canvas.toBlob(b=>b?resolve(b):reject(new Error('Your browser could not export this image in that format. Try PNG or JPG.')),type,quality));}
+$('processBtn').addEventListener('click',async()=>{
+ if(!image||!file){status('Choose an image first.','error');return;}
+ clearOutput();$('processBtn').disabled=true;status('Processing image…');
+ try{
+ let canvas=document.createElement('canvas'),ctx=canvas.getContext('2d');
+ if(activeTool==='resize'){
+ let w=Number($('width').value),h=Number($('height').value);
+ if(!Number.isInteger(w)||!Number.isInteger(h)||w<1||h<1||w>12000||h>12000)throw new Error('Enter width and height from 1 to 12,000 pixels.');
+ canvas.width=w;canvas.height=h;ctx.drawImage(baseCanvas,0,0,w,h);
+ }else if(activeTool==='crop'){
+ let x=Number($('cropX').value),y=Number($('cropY').value),w=Number($('cropW').value),h=Number($('cropH').value);
+ if(![x,y,w,h].every(Number.isInteger)||x<0||y<0||w<1||h<1||x+w>image.naturalWidth||y+h>image.naturalHeight)throw new Error(`Crop area must fit inside the original image (${image.naturalWidth} × ${image.naturalHeight} px).`);
+ canvas.width=w;canvas.height=h;ctx.drawImage(baseCanvas,x,y,w,h,0,0,w,h);
+ }else{canvas.width=baseCanvas.width;canvas.height=baseCanvas.height;ctx.drawImage(baseCanvas,0,0);}
+ let type=activeTool==='convert'?$('format').value:(activeTool==='compress'?(file.type==='image/png'?'image/png':'image/jpeg'):(file.type==='image/png'?'image/png':file.type==='image/webp'?'image/webp':'image/jpeg'));
+ if(!['image/png','image/jpeg','image/webp'].includes(type))type='image/png';
+ const quality=Number($('quality').value)/100;
+ outputBlob=await canvasBlob(canvas,type,(type==='image/png'?undefined:quality));
+ outputURL=URL.createObjectURL(outputBlob);
+ const ext=type==='image/jpeg'?'jpg':type==='image/png'?'png':'webp';
+ outputName=(file.name.replace(/\.[^.]+$/,'')||'image')+'-'+activeTool+'.'+ext;
+ $('preview').innerHTML='';const resultImg=document.createElement('img');resultImg.src=outputURL;resultImg.alt='Processed image preview';$('preview').appendChild(resultImg);
+ $('downloadBtn').disabled=false;
+ const savings=file.size?Math.round((1-outputBlob.size/file.size)*100):0;
+ status(`Done: ${canvas.width} × ${canvas.height} px · Output ${fmt(outputBlob.size)} · ${savings>=0?savings+'% smaller':Math.abs(savings)+'% larger'} than original. Preview shows the processed result.`,'good');
+ }catch(e){status(e.message||'Something went wrong. Try a different image or setting.','error');}
+ finally{$('processBtn').disabled=!image;}
+});
+$('downloadBtn').addEventListener('click',()=>{
+ if(!outputURL||!outputBlob)return;
+ const a=document.createElement('a');a.href=outputURL;a.download=outputName;document.body.appendChild(a);a.click();a.remove();
+});
+$('resetBtn').addEventListener('click',()=>{
+ file=null;image=null;baseCanvas=null;$('fileInput').value='';$('processBtn').disabled=true;clearOutput();
+ if(imageURL)URL.revokeObjectURL(imageURL);imageURL=null;
+ $('preview').innerHTML='<div class="empty">Your image preview will appear here.</div>';$('imageMeta').textContent='No image selected.';
+ $('width').value='';$('height').value='';$('cropX').value=0;$('cropY').value=0;$('cropW').value='';$('cropH').value='';
+ selectTool('resize');status('Choose an image to begin. Your image stays in this browser during processing.');
+});
+})();
+</script>
+</body>
+</html>
